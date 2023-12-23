@@ -66,6 +66,21 @@ mt$pemdas = (((mt$mpg*2)/10)/mt$gear)
 
 The point here is not to re-hash math lessons, but to revisit why the order that we write things in is important. We all read English the same way, left to right, top to bottom. R does the same thing with the code you give it. PEMDAS is hopefully a familiar example to illustrate this point with non-English text.
 
+
+##### Other math operatiors
+
+sometimes you want to learn about your data, but not manipulate it. R has operators for this as well. These include:
+min() find the minimum value in the column
+max() find the maximal value in the column
+sum() find the sum of the column
+mean() find the mean of the column 
+n() counts the number of rows in the column 
+
+``` r
+## Find the mean cyl
+mean(mt$cyl)
+```
+
 ##### Subset our data using other operators
 
 Let's say we only want part of the entire dataset we have. This is achieved with the `subset()` command. Here are a list of operators you might use:
@@ -94,6 +109,8 @@ mtsub = subset(mt, mt$cyl>= 5)
 mtextreme = subset(mt, mt$wt<2 | mt$wt >5)
 ```
 
+
+
 ### Solo practice using operators
 
 ##### Exercise #1
@@ -114,13 +131,31 @@ If you got this answer, great! Move on to Exercise #2
 
 Create a new variable in *mtmid* called *ex2*. Create this new variable by **dividing** the mpg by cyl and put that the the **power** of the carb.
 
-##### Answers for Exercise #1 and #2
+Go to Exercise #3
+
+##### Exercise #3
+Find the maximal value of your new *ex2* variable
+
+
+##### Answers for Exercise #1 to 3
 
 ```r
 # Exercise #1
 mtmid = subset(mt, mt$cyl==4 & mt$qsec >18 & mt$gear !=3)
 
+
+
+
+
 # Exercise #2
 mtmid$ex2 = (mtmid$mpg/mtmid$cyl)^mtmid$carb
+
+
+
+
+
+
+# Exercise #3
+max(mtmid$ex2)
 
 ```

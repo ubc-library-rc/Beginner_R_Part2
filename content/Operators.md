@@ -23,8 +23,6 @@ Then, in part 1, we talked about tell R where to get the data files from your co
 mt = mtcars
 ```
 
-##### 
-
 ##### Try out some mathmatical operators
 
 Now that we have our data and since this is a workshop I can tell you that it is formatted correctly, we can move to the fun part, data analysis!
@@ -36,7 +34,7 @@ mt$mpg+mt$cyl
 
 Note that R is working along each row when you are using operators.
 
-![](images/addition.png){width="529"}
+![](images/addition.png)
 
 Because R is working along rows, you can create new variables in your dataset when doing calculations.
 
@@ -50,11 +48,11 @@ print(mt$add)
 ## DIVISION
 mt$div = mt$mpg/mt$cyl
 
-## MULTIPLY
+## MULTIPLICATION
 mt$mult = mt$mpg*mt$cyl
 
 ## BRACKETS TO SPECIFY THE ORDER OF OPERATIONS
-# In English, PEMDAS is the accronym some peopel use to remember the order to calculate equations in
+# In English, PEMDAS is the acronym some people use to remember the order to calculate equations
   #1 Paretheses () 
   #2 Exponent ^ 
   #3 Multiplecation * and Division / in the order the are writen 
@@ -66,20 +64,26 @@ mt$pemdas = (((mt$mpg*2)/10)/mt$gear)
 
 The point here is not to re-hash math lessons, but to revisit why the order that we write things in is important. We all read English the same way, left to right, top to bottom. R does the same thing with the code you give it. PEMDAS is hopefully a familiar example to illustrate this point with non-English text.
 
-
 ##### Other math operatiors
 
-sometimes you want to learn about your data, but not manipulate it. R has operators for this as well. These include:
-min() find the minimum value in the column
-max() find the maximal value in the column
-sum() find the sum of the column
-mean() find the mean of the column 
-n() counts the number of rows in the column 
+Sometimes you want to learn about your data, but not manipulate it. R has operators for this as well. These include:
+
+`min()` find the minimum value in the column
+
+`max()` find the maximal value in the column
+
+`sum()` find the sum of the column
+
+`mean()` find the mean of the column
+
+`n()` count the number of rows in the column
 
 ``` r
 ## Find the mean cyl
 mean(mt$cyl)
 ```
+
+The mean is 6.1875
 
 ##### Subset our data using other operators
 
@@ -95,21 +99,19 @@ Let's say we only want part of the entire dataset we have. This is achieved with
 
 `<` less than (only works with numeric or integer variables)
 
-\<= less than or equal to(only works with numeric or integer variables)
+`<=` less than or equal to(only works with numeric or integer variables)
 
 `&` and
 
 `|` or
 
-```r
+``` r
 # Create a new dataframe with only cars that have at least 5 cyclinders
 mtsub = subset(mt, mt$cyl>= 5)
 
 # Create new dataframe with cars that have a wt below 2 or over 5
 mtextreme = subset(mt, mt$wt<2 | mt$wt >5)
 ```
-
-
 
 ### Solo practice using operators
 
@@ -134,12 +136,12 @@ Create a new variable in *mtmid* called *ex2*. Create this new variable by **div
 Go to Exercise #3
 
 ##### Exercise #3
-Find the maximal value of your new *ex2* variable
 
+Find the maximal value of your new *ex2* variable
 
 ##### Answers for Exercise #1 to 3
 
-```r
+``` r
 # Exercise #1
 mtmid = subset(mt, mt$cyl==4 & mt$qsec >18 & mt$gear !=3)
 
@@ -157,5 +159,4 @@ mtmid$ex2 = (mtmid$mpg/mtmid$cyl)^mtmid$carb
 
 # Exercise #3
 max(mtmid$ex2)
-
 ```

@@ -8,7 +8,11 @@ nav_order: 1
 
 If you have opened RStudio before, know what packages are, and know how to read files into R but not much beyond that, this workshop is for you! If your expertise is not at this level yet, no worries! Go over [Beginner R Part 1](https://ubc-library-rc.github.io/Beginner_R_Part1/) first.
 
-In this workshop, we will go over some operators in R and get some hands on practice using them. Then, we will work though some errors in R to learn how to go about solving errors using the operators we learned about previously. Lastly, towards the end we will go over how to customize the look of your RStudio (this is very helpful for accessibility) and how to cite R packages to give credit to the people who put in so much hard work developing them.
+In this workshop, we will go over some operators in R and get some hands on practice using them. 
+
+Then, we will work though some errors in R to learn how to go about solving errors using the operators we learned about previously. 
+
+Lastly, towards the end we will go over how to customize the look of your RStudio (this is very helpful for accessibility) and how to cite R packages to give credit to the people who put in so much hard work developing them.
 
 ## Learning objectives
 
@@ -26,4 +30,4 @@ At the end of this workshop, you will be able to:
 | 0:50 \| RStudio Customization \|
 | 1:00 \| Wrap-up and Discussion \|
 
-## 
+

@@ -38,7 +38,7 @@ We are going to go over the errors listed above with examples now and how to fix
 
 ##### Example of working through errors dues to data availability and formatting 
 
-```{r}
+```r
 #Let's say we want to calculate the mean length of seagrass leaves that we measured in a seagrass medow
 
 mean(seagrass$width)
@@ -48,7 +48,7 @@ mean(seagrass$width)
 
 R is saying, I don't know what seagrass is. I can't calculate the mean of something that does not exist in the R environment. This is why reading in all the files you need at the start of your script and checking that they look okay is one of the first [things you do in your RScript](https://ubc-library-rc.github.io/Beginner_R_Part1/content/about_R.html).
 
-```{r}
+```r
 # make the seagrass dataframe 
   # step 1 make the variables
 width = c("1.5", "2", "0.9", "1.8")
@@ -59,7 +59,7 @@ seagrass = data.frame(width, length)
 
 Now that we have the seagrass dataset in the R environment, let's try to calculate the mean again.
 
-```{r}
+```r
 # try to calculate the mean again
 mean(seagrass$width)
 ```
@@ -72,7 +72,7 @@ R is saying, I know you want me to calculate the mean, but width is a character 
 
 Let's look at the dataset a bit closer. If you look at the column types (press the blue button next to the word seagrass in the Data section of the environment), you can see that width has **chr** next to it, which means that width is a character. Since there is this sampel problem with length as well, let's change the entire dataframe to numeirc
 
-```{r}
+```r
 # change the dataset to have all numeric variables 
 seagrass.num = sapply(seagrass, as.numeric)
 
@@ -86,7 +86,7 @@ Still no!
 
 Look at in the R environement. Do you see how *seagrass* has a blue arrow next to it but not *seagrass.num*? This is because *seagrass.num* is a matrix right now. It needs to be a dataframe for R to calculate the mean of a column.
 
-```{r}
+```r
 # make seagrass.num a dataframe
 seagrass.num = as.data.frame(seagrass.num)
 

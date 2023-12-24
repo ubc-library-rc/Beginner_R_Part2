@@ -8,7 +8,7 @@ nav_order: 6
 
 Operators are symbols to tell R to perform certain mathematical operations. Think back to math class, we use `+` to indicate adding and `-` to indicate subtraction. R uses these operators and many others as well.
 
-While `+` and `-` are simple operators, functions, which are part of packages in R, are basically *very fancy* operators. We talked a bit about packages in Beginner R Part 1 but we do not talk about them today.
+While `+` and `-` are simple operators, functions, which are part of packages in R, are basically *very fancy* operators. We talked a bit about packages in Beginner R Part 1. In this workshop, we assume you know what packages are, but we don't practice using them today.
 
 ### Guided Practice using operators
 

@@ -12,7 +12,10 @@ In this workshop, we will go over some operators in R and get some hands on prac
 
 ## Learning objectives
 
-At the end of this workshop, you will be able to: 1. Use Operators in R 2. Fix common errors in R 3. Know how to customize RStudio and cite R packages.
+At the end of this workshop, you will be able to: 
+1. Use Operators in R 
+2. Fix common errors in R 
+3. Know how to customize RStudio and cite R packages.
 
 ## Schedule
 

@@ -4,6 +4,8 @@ title: Fixing Errors
 nav_order: 7
 ---
 
+When you get errors, R is trying to help you.
+
 ### Why do errors happen?
 
 From personal experience, being a TA for an R lab, and my time as the libraries Data Analysis and Visualization GAA, there are a few broad categories of errors:
@@ -24,17 +26,137 @@ From personal experience, being a TA for an R lab, and my time as the libraries 
 
     -   A variable is numeric but it needs to be a factor
 
-    -   There as NA or 0 value sin your data and what you are trying to do can't deal with that.
+    -   There as NA or 0 values in your data and what you are trying to do can't deal with that.
 
 3.  Your code is in the wrong order or you already ran something that can't be run again on your existing data. This is usually the issue is someone says "this worked before".
 
-4.  Other problems. These are harder to solve and are the more expert-level things. This can include having to use different versions of R or R packages, laying many functions together, only running parts of the data at a time to not crash a system, etc. If you encounter these types of errors, you are usually pretty adavanced in R anyway. I rarely see these type of errors when I am helping others.
+4.  Other problems. These are harder to solve and are the more expert-level things. This can include having to use different versions of R or R packages, laying many functions together, only running parts of the data at a time to not crash a system, etc. If you encounter these types of errors, you are usually pretty advanced in R anyway. I rarely see these type of errors when I am helping others.
 
 We are going to go over the errors listed above with examples now and how to fix them.
 
 ### 1. R does not understand what you are asking it for
 
-### 2. The data are not formatted properly 
+##### Example of working through errors dues to data availability and formatting 
+
+```{r}
+#Let's say we want to calculate the mean length of seagrass leaves that we measured in a seagrass medow
+
+mean(seagrass$width)
+```
+
+![](images/meanseagrass.png)
+
+R is saying, I don't know what seagrass is. I can't calculate the mean of something that does not exist in the R environment. This is why reading in all the files you need at the start of your script and checking that they look okay is one of the first [things you do in your RScript](https://ubc-library-rc.github.io/Beginner_R_Part1/content/about_R.html).
+
+```{r}
+# make the seagrass dataframe 
+  # step 1 make the variables
+width = c("1.5", "2", "0.9", "1.8")
+length = c("20", "18", "23", "19")
+  # step 2 make the seagrass dataframe
+seagrass = data.frame(width, length)
+```
+
+Now that we have the seagrass dataset in the R environment, let's try to calculate the mean again.
+
+```{r}
+# try to calculate the mean again
+mean(seagrass$width)
+```
+
+![](images/mean_not_numeric.png)
+
+Still not working!
+
+R is saying, I know you want me to calculate the mean, but width is a character variable. I can't calculate the mean of a character.
+
+Let's look at the dataset a bit closer. If you look at the column types (press the blue button next to the word seagrass in the Data section of the environment), you can see that width has **chr** next to it, which means that width is a character. Since there is this sampel problem with length as well, let's change the entire dataframe to numeirc
+
+```{r}
+# change the dataset to have all numeric variables 
+seagrass.num = sapply(seagrass, as.numeric)
+
+# try to calculate the mean again
+mean(seagrass.num$width)
+```
+
+![](images/seagrass_atomic.png)
+
+Still no!
+
+Look at in the R environement. Do you see how *seagrass* has a blue arrow next to it but not *seagrass.num*? This is because *seagrass.num* is a matrix right now. It needs to be a dataframe for R to calculate the mean of a column.
+
+```{r}
+# make seagrass.num a dataframe
+seagrass.num = as.data.frame(seagrass.num)
+
+# try to caluclate the mean again
+mean(seagrass.num$width)
+```
+
+The mean width is 1.55 cm
+
+See how we got a bunch of errors but they kept changing and we worked through them?
+
+As long as you are getting new errors, you are probably making progress. The issues arise when you get an error many times and as far as you can tell, the code should work.
+
+When this happens:
+
+-   Check your spelling
+
+-   Save your RScript and re-start your R session. Run your script from the start again to see if it works. Sometimes this fixes the problem. Starting from an empty R environment can be very helpful in-case you overwrote something you did not mean to.
+
+    Also, if you run and R Script from that start, you will find the first instance of an error in your script. This is very helpful to figure out where things start to break down.
+
+##### Quick package errors overview. 
+
+We do not really have time to cover packages today (see [Beginner R Part 1](https://ubc-library-rc.github.io/Beginner_R_Part1/)), but to help you in-case the error you are getting is because of a package that is not installed or loaded, here are the general steps
+
+1.  type ?the.command (for example `?ggplot`) in your console. If you see this type of error message, it means the package that contains this command is not loaded.
+
+    ![](images/no_ggplot.png)
+
+    Use the library() command (for example `library(ggplot2)` ) to load the package that contains the command you need to run.
+
+2.  If you **do not get errors** when you run the library command, try running your code again. You still might get errors, but they should be different now and they are probably because of data formatting or syntax of your code now.
+
+    If you **get an error again**, go to step 3.
+
+3.  see if the package that contains the function you need comes up when you [search for it in your installed packages](https://ubc-library-rc.github.io/Beginner_R_Part1/content/about_R.html#set-up-part-1-load-in-packages)
+
+4.  if it does not come up, install the package. Go to step 2 after installing.
+
+Errors because of packages not being available are common and is why we [load the packages at the start of our script](https://ubc-library-rc.github.io/Beginner_R_Part1/content/about_R.html#set-up-part-1-load-in-packages). That way, we can see the errors right away and deal with them before adding on complexity.
+
+##### R is waiting for a command but not getting it 
+
+If you notice that your console has **+** and not a **\>** next to the output (image below), that means R is still waiting for part of something to be run. This can cause many problems.
+
+![](images/waiting_error.png)
+
+When this inevitably happens, click in the **console** and press the escape (*Esc*) key. Then. to check that it worked, click the *Enter* key. You should now see **\>** in your console again next to your newest lines.
+
+This happens because a parentheses or quotes were not closed. For example, this means, you need to have the same number of `(` and `)` in your script, otherwise, you will have open parentheses. Same for quotes.
+
+R will underline mismatched parentheses and they are color coated, so it should be possible to tell which one is missing.
+
+### 2. The data are not formatted properly
+
+Remeber how we had to change a matrix to a dataframe in the example in part 1 above? That fall in this category. When running a statistical test, it is usually in the information about the package how the data need to be formatted.
+
+Let's look at a [function](https://rdrr.io/rforge/vegan/man/adonis.html) in the package vegan. This is for multivariate analysis of microbiome data.
+
+![](images/run_adonis.png)
+
+This information is important to look over when using a new function. Most packages also have examples and example data that you can use to test the function on your computer before using your own data. This is part of the *adonis* example on.
+
+![](images/cran-example.png)
+
+Running the examples with the example data is great because it lets you know that the package works as it should.
+
+Then, you can modify the code to be the model type you want to run. If that still works, then your code is working. If it doesn't work, there is a problem with your code.
+
+Then, when you run the same code with your own data, if it works, then great! Otherwise, you know the errors are because of data formatting, not because your code is wrong.
 
 ### 3. Code is in the wrong order
 

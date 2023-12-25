@@ -76,7 +76,7 @@ Sometimes you want to learn about your data, but not manipulate it. R has operat
 
 `mean()` find the mean of the column
 
-`n()` count the number of rows in the column
+`length()` count the number of rows in the column
 
 ``` r
 ## Find the mean cyl

@@ -8,7 +8,7 @@ nav_order: 10
 
 We are working with the iris dataset today
 
-```{r}
+```r
 # this is to make the iris dataset show up in the R environement 
 iris = iris
 
@@ -18,7 +18,7 @@ summary(iris)
 
 ### Exercise 1
 
-```{r}
+```r
 # Why is this code not working? 
   #We know the length should be 150 from looking at the data in the Environement 
 length(iris$species)
@@ -28,14 +28,14 @@ length(iris$species)
 
 ### Exercise 2
 
-```{r}
+```r
 # calculate the median iris$Species
 
 ```
 
 ### Exercise 3
 
-```{r}
+```r
 # install the package if you need to
 #install.packages("plyr")
 
@@ -61,26 +61,25 @@ print(iris.summarized$max.sw)
 ```
 
 ### Answers
-
-```{r}
-
-# Exercise 1
+#### Exercise 1
+```r
   # Species needs to be capitalized 
 length(iris$Species)
 
+```
 
 
-
-# Exercise 2
+#### Exercise 2
+```r
   # Error in median.default(iris$Species) : need numeric data 
   # Species is a character variable, not numeric 
 # You can't do this because it does not make sense. The code below calculates the median for the Sepal.Length column
 median(iris$Sepal.Length)
 
+```
 
-
-
-# Exercise 3
+#### Exercise 3
+```r
 # we did not include sepal width in our iris.summarized data so R does not know what you are asking it for. 
 # It is saying, this does not exist. 
 # this can be solved either by swithing your question to Sepal.Length 

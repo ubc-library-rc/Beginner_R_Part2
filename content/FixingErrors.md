@@ -22,7 +22,7 @@ From personal experience, being a TA for an R lab, and my time as the libraries 
 
 2.  The data are not formatted properly. For example:
 
-    -   You're working with a data frame when it has to be a matrix
+    -   You're working with a data frame when it has to be a matrix. Data frames can contain many different types of data but a matrix can onyl contain a single data type. 
 
     -   A variable is numeric but it needs to be a factor
 

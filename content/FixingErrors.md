@@ -22,9 +22,9 @@ From personal experience, being a TA for an R lab, and my time as the libraries 
 
 2.  The data are not formatted properly. For example:
 
-    -   You're working with a data frame when it has to be a matrix. Data frames can contain many different types of data but a matrix can onyl contain a single data type. 
+    -   You're working with a data frame when it has to be a matrix. Data frames can contain many different types of data but a matrix can only contain a single data type. See more detailed information [here.](https://www.geeksforgeeks.org/matrix-vs-dataframe-in-r/)
 
-    -   A variable is numeric but it needs to be a factor
+    -   A variable is numeric but it needs to be a factor.
 
     -   There as NA or 0 values in your data and what you are trying to do can't deal with that.
 
@@ -70,31 +70,24 @@ Still not working!
 
 R is saying, I know you want me to calculate the mean, but width is a character variable. I can't calculate the mean of a character.
 
-Let's look at the dataset a bit closer. If you look at the column types (press the blue button next to the word seagrass in the Data section of the environment), you can see that width has **chr** next to it, which means that width is a character. Since there is this sampel problem with length as well, let's change the entire dataframe to numeirc
+Let's look at the dataset a bit closer. If you look at the column types (press the blue button next to the word seagrass in the Data section of the environment), you can see that width has **chr** next to it, which means that width is a character. Since there is this sample problem with length as well, let's change the entire dataframe to numeric.
 
 ``` r
-# change the dataset to have all numeric variables 
-seagrass.num = sapply(seagrass, as.numeric)
+# lets make a new seagrass dataset, specifying the column types.
+# this OVERWRITES the width, length, and seagrass objects we made previously
+  # step 1 make the variables
+width = as.numeric(c("1.5", "2", "0.9", "1.8"))
+length = as.numeric(c("20", "18", "23", "19"))
+  # step 2 make the seagrass dataframe
+seagrass = data.frame(width, length)
 
 # try to calculate the mean again
-mean(seagrass.num$width)
-```
-
-![](images/seagrass_atomic.png)
-
-Still no!
-
-Look at in the R environement. Do you see how *seagrass* has a blue arrow next to it but not *seagrass.num*? This is because *seagrass.num* is a matrix right now. It needs to be a dataframe for R to calculate the mean of a column.
-
-``` r
-# make seagrass.num a dataframe
-seagrass.num = as.data.frame(seagrass.num)
-
-# try to caluclate the mean again
-mean(seagrass.num$width)
+mean(seagrass$width)
 ```
 
 The mean width is 1.55 cm
+
+### Debreif about errors 
 
 See how we got a bunch of errors but they kept changing and we worked through them?
 
@@ -144,11 +137,17 @@ R will underline mismatched parentheses and they are color coated, so it should 
 
 Remember how we had to change a matrix to a dataframe in the example in part 1 above? That fall in this category. When running a statistical test, it is usually in the information about the package how the data need to be formatted.
 
+*Note, we are not discussing the adonis function here, just exploring the help CRAN offers for each function that is a packages on CRAN.*
+
 Let's look at a [function](https://rdrr.io/rforge/vegan/man/adonis.html) in the package vegan. This is for multivariate analysis of microbiome data.
 
 ![](images/run_adonis.png)
 
-This information is important to look over when using a new function. Most packages also have examples and example data that you can use to test the function on your computer before using your own data. This is part of the *adonis* example on.
+This information is important to look over when using a new function. Most packages also have examples and example data that you can use to test the function on your computer before using your own data.
+
+This is a screenshot of part of the *adonis* example on [CRAN](https://rdrr.io/rforge/vegan/man/adonis.html).
+
+Note, if you want to run this, you need to run `install.packages("vegan")` followed by `library(vegan)` .
 
 ![](images/cran-example.png)
 
@@ -157,6 +156,8 @@ Running the examples with the example data is great because it lets you know tha
 Then, you can modify the code to be the model type you want to run. If that still works, then your code is working. If it doesn't work, there is a problem with your code.
 
 Then, when you run the same code with your own data, if it works, then great! Otherwise, you know the errors are because of data formatting, not because your code is wrong.
+
+For every function in R, you can run `?the-function` (so here it would be `?adonis`) to get a basic help overview in the **Help** tab in RStudio.
 
 # 3. Code is in the wrong order
 

@@ -27,6 +27,8 @@ mt = mtcars
 
 Now that we have our data and since this is a workshop I can tell you that it is formatted correctly, we can move to the fun part, data analysis!
 
+In the code below, we are using the `$` to tell R the fllowing: within the mt dataframe, access($) the mpg column. 
+
 ``` r
 ## ADDITION 
 mt$mpg+mt$cyl
@@ -64,7 +66,7 @@ mt$pemdas = (((mt$mpg*2)/10)/mt$gear)
 
 The point here is not to re-hash math lessons, but to revisit why the order that we write things in is important. We all read English the same way, left to right, top to bottom. R does the same thing with the code you give it. PEMDAS is hopefully a familiar example to illustrate this point with non-English text.
 
-##### Other math operatiors
+##### Base R Functions 
 
 Sometimes you want to learn about your data, but not manipulate it. R has operators for this as well. These include:
 
@@ -76,7 +78,7 @@ Sometimes you want to learn about your data, but not manipulate it. R has operat
 
 `mean()` find the mean of the column
 
-`length()` count the number of rows in the column
+`length()` count the number of entries
 
 ``` r
 ## Find the mean cyl

@@ -72,13 +72,12 @@ Species needs to be capitalized
 
 #### Exercise 2
 <details>
-Error in median.default(iris$Species) : need numeric data 
+<p>Error in median.default(iris$Species) : need numeric data </p>
 
-Species is a character variable, not numeric 
+<p>Species is a character variable, not numeric </p>
 
-You can't do this because it does not make sense. The code below calculates the median for the Sepal.Length column
-
-`median(iris$Sepal.Length)`
+<p>You can't do this because it does not make sense. The code below calculates the median for the Sepal.Length column</p>
+<p>`median(iris$Sepal.Length)`</p>
 </details>
 
 #### Exercise 3

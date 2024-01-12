@@ -64,16 +64,9 @@ print(iris.summarized$max.sw)
 Click the dropdown to reveal the answers
 #### Exercise 1
 <details>
-Species needs to be capitalized. 
+<p>Species needs to be capitalized. </p>
 
-`length(iris$Species)`
-```r
-# this is to make the iris dataset show up in the R environement 
-iris = iris
-
-# Get an overview of the iris dataset 
-summary(iris)
-```
+<strong>length(iris$Species)</strong>
 
 </details>
 
@@ -85,33 +78,17 @@ summary(iris)
 <p>Species is a character variable, not numeric </p>
 
 <p>You can't do this because it does not make sense. The code below calculates the median for the Sepal.Length column</p>
-<p>`median(iris$Sepal.Length)`</p>
+<strong>median(iris$Sepal.Length)</strong>
 </details>
 
 #### Exercise 3
 <details>
-We did not include sepal width in our iris.summarized data so R does not know what you are asking it for. 
+<p>We did not include sepal width in our iris.summarized data so R does not know what you are asking it for. </p>
 
-It is saying, this does not exist. 
+<p>It is saying, this does not exist. </p>
 
-this can be solved either by swithing your question to Sepal.Length 
+<p>This can be solved either by swithing your question to Sepal.Length </p>
 
-`print(iris.summarized$max.sl)`
-ouput [1] 5.8 7.0 7.9
-
-or solved by adding Sepal.Width to the summarized iris dataset
-`iris.summarized = ddply(iris, # take the iris dataset
-                        c("Species"), # for each Species
-                        summarise, # summarize the 
-                        mean.sl = mean(Sepal.Length), # mean Sepal.Length 
-                        min.sl = min(Sepal.Length), # minumum Sepal.Length
-                        max.sl = max(Sepal.Length), # maximum Sepal.Length
-                        mean.sw = mean(Sepal.Width), # same as 3 above but with width 
-                        min.sw = min(Sepal.Width), 
-                        max.sw = max(Sepal.Width)) `
-
-try the print function again
-`print(iris.summarized$max.sw)`
-ouput is [1] 4.4 3.4 3.8 
-
+<strong>print(iris.summarized$max.sl)</strong>
+<p><i>ouput [1] 5.8 7.0 7.9</i></p>
 </details>

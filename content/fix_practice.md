@@ -64,7 +64,7 @@ print(iris.summarized$max.sw)
 Click the dropdown to reveal the answers
 #### Exercise 1
 <details>
-Species needs to be capitalized 
+Species needs to be capitalized. 
 
 `length(iris$Species)`
 </details>

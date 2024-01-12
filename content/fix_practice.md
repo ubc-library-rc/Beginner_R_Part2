@@ -67,6 +67,14 @@ Click the dropdown to reveal the answers
 Species needs to be capitalized. 
 
 `length(iris$Species)`
+```r
+# this is to make the iris dataset show up in the R environement 
+iris = iris
+
+# Get an overview of the iris dataset 
+summary(iris)
+```
+
 </details>
 
 

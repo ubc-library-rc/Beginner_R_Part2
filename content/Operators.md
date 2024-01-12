@@ -143,22 +143,20 @@ Find the maximal value of your new *ex2* variable
 
 ##### Answers for Exercise #1 to 3
 
-``` r
-# Exercise #1
-mtmid = subset(mt, mt$cyl==4 & mt$qsec >18 & mt$gear !=3)
+<strong> Exercise 1 </strong>
+<details> 
+  mtmid = subset(mt, mt$cyl==4 & mt$qsec >18 & mt$gear !=3)
+</details>
 
 
-
-
-
-# Exercise #2
+<strong> Exercise 2 </strong>
+<details> 
 mtmid$ex2 = (mtmid$mpg/mtmid$cyl)^mtmid$carb
+</details>
 
 
-
-
-
-
-# Exercise #3
+<strong>Exercise 3</strong>
+<details> 
 max(mtmid$ex2)
-```
+</details>
+

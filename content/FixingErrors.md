@@ -157,7 +157,7 @@ Then, you can modify the code to be the model type you want to run. If that stil
 
 Then, when you run the same code with your own data, if it works, then great! Otherwise, you know the errors are because of data formatting, not because your code is wrong.
 
-For every function in R, you can run `?the-function` (so here it would be `?adonis`) to get a basic help overview in the **Help** tab in RStudio.
+For every function in R, you can run the `?` function (so here it would be `?adonis`) to get a basic help overview in the **Help** tab in RStudio.
 
 # 3. Code is in the wrong order
 

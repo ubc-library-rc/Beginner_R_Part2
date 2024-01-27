@@ -157,6 +157,6 @@ Find the maximal value of your new *ex2* variable
 
 ### PACING
 
-![](zoom-figures/reactions - Copy.png){width="337"}
+![](zoom-figures/reactions - Copy.png)
 
 How is the pacing? Yes = Good Slower = Slow down Faster = Go faster

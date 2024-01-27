@@ -139,7 +139,7 @@ Remember how we had to change a matrix to a dataframe in the example in part 1 a
 
 *Note, we are not discussing the adonis function here, just exploring the help CRAN offers for each function that is a packages on CRAN.*
 
-*CRAN is a network of servers that store identical, up-to-date, versions of code and documentation for R. Downloading from CRAN is safe. Everything on CRAN is heavily validated both interms of quality and documentation provided to the users. *
+<strong>CRAN</strong> is a network of servers that store identical, up-to-date, versions of code and documentation for R. Downloading from CRAN is safe. Everything on CRAN is heavily validated both interms of quality and documentation provided to the users.
 
 Let's look at a [function](https://rdrr.io/rforge/vegan/man/adonis.html) in the package vegan. This is for multivariate analysis of microbiome data.
 

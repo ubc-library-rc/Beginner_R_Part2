@@ -160,3 +160,8 @@ mtmid$ex2 = (mtmid$mpg/mtmid$cyl)^mtmid$carb
 max(mtmid$ex2)
 </details>
 
+##### PACING
+How is the pacing? 
+Yes = Good
+Slower = Slow down
+Faster = Go faster

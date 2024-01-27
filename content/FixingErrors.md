@@ -135,9 +135,11 @@ R will underline mismatched parentheses and they are color coated, so it should 
 
 # 2. The data are not formatted properly
 
-Remember how we had to change a matrix to a dataframe in the example in part 1 above? That fall in this category. When running a statistical test, it is usually in the information about the package how the data need to be formatted.
+Remember how we had to change a matrix to a dataframe in the example in part 1 above? That falls in this category. When running a statistical test, it is usually in the information about the package how the data need to be formatted.
 
 *Note, we are not discussing the adonis function here, just exploring the help CRAN offers for each function that is a packages on CRAN.*
+
+*CRAN is a network of servers that store identical, up-to-date, versions of code and documentation for R. Downloading from CRAN is safe. Everything on CRAN is heavily validated both interms of quality and documentation provided to the users. *
 
 Let's look at a [function](https://rdrr.io/rforge/vegan/man/adonis.html) in the package vegan. This is for multivariate analysis of microbiome data.
 
@@ -173,4 +175,4 @@ To mitigate this for myself, I
 
 For step 2, I save and close R, then re-run the script I just fixed in a new R session. If the code still works, then all good!. If the code does not work, then the **troubleshooting is fresh in your mind** and it will be much easier to figure out what part of the code is in the wrong spot than if you went back and got the same error even the next day.
 
-### 
+

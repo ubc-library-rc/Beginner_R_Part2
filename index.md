@@ -4,9 +4,9 @@ title: Outline
 nav_order: 1
 ---
 
-## Note: this workshop is in development and not yet complete.
-
 If you have opened RStudio before, know what packages are, and know how to read files into R but not much beyond that, this workshop is for you! If your expertise is not at this level yet, no worries! Go over [Beginner R Part 1](https://ubc-library-rc.github.io/Beginner_R_Part1/) first.
+
+<strong>This workshop assumes no coding experience beyond the material covered in Beginner R Part 1.</strong> 
 
 In this workshop, we will go over some operators in R and get some hands on practice using them. 
 

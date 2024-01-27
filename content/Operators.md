@@ -27,7 +27,7 @@ mt = mtcars
 
 Now that we have our data and since this is a workshop I can tell you that it is formatted correctly, we can move to the fun part, data analysis!
 
-In the code below, we are using the `$` to tell R the fllowing: within the mt dataframe, access($) the mpg column. 
+In the code below, we are using the `$` to tell R the fllowing: within the mt dataframe, access(\$) the mpg column.
 
 ``` r
 ## ADDITION 
@@ -66,7 +66,7 @@ mt$pemdas = (((mt$mpg*2)/10)/mt$gear)
 
 The point here is not to re-hash math lessons, but to revisit why the order that we write things in is important. We all read English the same way, left to right, top to bottom. R does the same thing with the code you give it. PEMDAS is hopefully a familiar example to illustrate this point with non-English text.
 
-##### Base R Functions 
+##### Base R Functions
 
 Sometimes you want to learn about your data, but not manipulate it. R has operators for this as well. These include:
 
@@ -144,24 +144,19 @@ Find the maximal value of your new *ex2* variable
 ##### Answers for Exercise #1 to 3
 
 <strong> Exercise 1 </strong>
-<details> 
-  mtmid = subset(mt, mt$cyl==4 & mt$qsec >18 & mt$gear !=3)
-</details>
 
+<details>mtmid = subset(mt, mt$cyl==4 & mt$qsec \>18 & mt\$gear !=3)</details>
 
 <strong> Exercise 2 </strong>
-<details> 
-mtmid$ex2 = (mtmid$mpg/mtmid$cyl)^mtmid$carb
-</details>
 
+<details>mtmid$ex2 = (mtmid$mpg/mtmid$cyl)^mtmid$carb</details>
 
 <strong>Exercise 3</strong>
-<details> 
-max(mtmid$ex2)
-</details>
 
-##### PACING
-How is the pacing? 
-Yes = Good
-Slower = Slow down
-Faster = Go faster
+<details>max(mtmid\$ex2)</details>
+
+### PACING
+
+![](zoom-figures/reactions - Copy.png){width="337"}
+
+How is the pacing? Yes = Good Slower = Slow down Faster = Go faster

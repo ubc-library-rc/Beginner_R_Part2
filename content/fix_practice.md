@@ -87,7 +87,7 @@ Click the dropdown to reveal the answers
 
 <p>It is saying, this does not exist. </p>
 
-<p>This can be solved either by swithing your question to Sepal.Length </p>
+<p>This can be solved either by switching our question to Sepal.Length </p>
 
 <strong>print(iris.summarized$max.sl)</strong>
 <p><i>ouput [1] 5.8 7.0 7.9</i></p>

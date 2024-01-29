@@ -13,11 +13,8 @@ From personal experience, being a TA for an R lab, and my time as the libraries 
 1.  R does not understand what you are asking it for. This includes:
 
     -   The packages are not loaded
-
     -   R can't find the file or variable you are asking for
-
     -   Typos
-
     -   R is waiting for commands but not getting them. This include parentheses, quotes, and operations (like a plot) that are not closed.
 
 2.  The data are not formatted properly. For example:
@@ -36,7 +33,7 @@ We are going to go over the errors listed above with examples now and how to fix
 
 # 1. R does not understand what you are asking it for
 
-### Example of working through errors dues to data availability and formatting
+### Working through errors due to data availability and formatting
 
 ``` r
 #Let's say we want to calculate the mean length of seagrass leaves that we measured in a seagrass medow
@@ -70,7 +67,7 @@ Still not working!
 
 R is saying, I know you want me to calculate the mean, but width is a character variable. I can't calculate the mean of a character.
 
-Let's look at the dataset a bit closer. If you look at the column types (press the blue button next to the word seagrass in the Data section of the environment), you can see that width has **chr** next to it, which means that width is a character. Since there is this sample problem with length as well, let's change the entire dataframe to numeric.
+Let's look at the dataset a bit closer. If you look at the column types (press the blue button next to the word seagrass in the Data section of the environment), you can see that width has **chr** next to it, which means that width is a character. Since there is this same problem with length as well, let's change the entire dataframe to numeric.
 
 ``` r
 # lets make a new seagrass dataset, specifying the column types.
@@ -87,7 +84,7 @@ mean(seagrass$width)
 
 The mean width is 1.55 cm
 
-### Debreif about errors 
+### Debrief about errors 
 
 See how we got a bunch of errors but they kept changing and we worked through them?
 
@@ -97,15 +94,15 @@ When this happens:
 
 -   Check your spelling
 
--   Save your RScript and re-start your R session. Run your script from the start again to see if it works. Sometimes this fixes the problem. Starting from an empty R environment can be very helpful in-case you overwrote something you did not mean to.
+-   Save your RScript and re-start your R session. Run your script from the start again to see if it works. Sometimes this fixes the problem. Starting from an empty R environment can be very helpful in case you overwrote something you did not mean to.
 
-    Also, if you run and R Script from that start, you will find the first instance of an error in your script. This is very helpful to figure out where things start to break down.
+    Also, if you run an R Script from the start, you will find the first instance of an error in your script. This is very helpful to figure out where things start to break down.
 
-### Quick package errors overview.
+### Quick package errors overview
 
-We do not really have time to cover packages today (see [Beginner R Part 1](https://ubc-library-rc.github.io/Beginner_R_Part1/)), but to help you in-case the error you are getting is because of a package that is not installed or loaded, here are the general steps
+We do not really have time to cover packages today (see [Beginner R Part 1](https://ubc-library-rc.github.io/Beginner_R_Part1/)), but to help you in case the error you are getting is because of a package that is not installed or loaded, here are the general steps.
 
-1.  type ?the.command (for example `?ggplot`) in your console. If you see this type of error message, it means the package that contains this command is not loaded.
+1.  Type `?` followed by the command name in your console (for example `?ggplot`). If you see this type of error message, it means the package that contains this command is not loaded.
 
     ![](images/no_ggplot.png)
 
@@ -115,11 +112,11 @@ We do not really have time to cover packages today (see [Beginner R Part 1](http
 
     If you **get an error again**, go to step 3.
 
-3.  see if the package that contains the function you need comes up when you [search for it in your installed packages](https://ubc-library-rc.github.io/Beginner_R_Part1/content/about_R.html#set-up-part-1-load-in-packages)
+3.  See if the package that contains the function you need comes up when you [search for it in your installed packages](https://ubc-library-rc.github.io/Beginner_R_Part1/content/about_R.html#set-up-part-1-load-in-packages)
 
-4.  if it does not come up, install the package. Go to step 2 after installing.
+4.  If it does not come up, install the package. Go to step 2 after installing.
 
-Errors because of packages not being available are common and is why we [load the packages at the start of our script](https://ubc-library-rc.github.io/Beginner_R_Part1/content/about_R.html#set-up-part-1-load-in-packages). That way, we can see the errors right away and deal with them before adding on complexity.
+Errors because of packages not being available are common and this is why we [load the packages at the start of our script](https://ubc-library-rc.github.io/Beginner_R_Part1/content/about_R.html#set-up-part-1-load-in-packages). That way, we can see the errors right away and deal with them before adding complexity.
 
 ### R is waiting for a command but not getting it
 
@@ -127,21 +124,22 @@ If you notice that your console has **+** and not a **\>** next to the output (i
 
 ![](images/waiting_error.png)
 
-When this inevitably happens, click in the **console** and press the escape (*Esc*) key. Then. to check that it worked, click the *Enter* key. You should now see **\>** in your console again next to your newest lines.
+When this inevitably happens, click in the **console** and press the escape (*Esc*) key. Then, to check that it worked, click the *Enter* key. You should now see **\>** in your console again next to your newest line.
 
-This happens because a parentheses or quotes were not closed. For example, this means, you need to have the same number of `(` and `)` in your script, otherwise, you will have open parentheses. Same for quotes.
+This happens because parentheses or quotes were not closed. You need to have the same number of `(` and `)` in your script, otherwise you will have open parentheses. The same applies to quotes.
 
-R will underline mismatched parentheses and they are color coated, so it should be possible to tell which one is missing.
+R will underline mismatched parentheses and they are color coded, so it should be possible to tell which one is missing.
 
 # 2. The data are not formatted properly
 
 Remember how we had to change a matrix to a dataframe in the example in part 1 above? That falls in this category. When running a statistical test, it is usually in the information about the package how the data need to be formatted.
 
-*Note, we are not discussing the adonis function here, just exploring the help CRAN offers for each function that is a packages on CRAN.*
-
-<strong>CRAN</strong> is a network of servers that store identical, up-to-date, versions of code and documentation for R. Downloading from CRAN is safe. Everything on CRAN is heavily validated both interms of quality and documentation provided to the users.
+<strong>CRAN</strong> is a network of servers that store identical, up-to-date, versions of code and documentation for R. Downloading from CRAN is safe. Everything on CRAN is heavily validated both in terms of quality and documentation provided to the users.
 
 Let's look at a [function](https://rdrr.io/rforge/vegan/man/adonis.html) in the package vegan. This is for multivariate analysis of microbiome data.
+
+We are not discussing the adonis function here, just exploring the help available for each function that is in a package on CRAN.
+{: .note}
 
 ![](images/run_adonis.png)
 
@@ -163,7 +161,7 @@ For every function in R, you can run the `?` function (so here it would be `?ado
 
 # 3. Code is in the wrong order
 
-These types of errors are usually caused by [not setting up your R session correctly](https://ubc-library-rc.github.io/Beginner_R_Part1/content/about_R.html) before doing data analysis. This is often associated with troubleshooting code, where bunch of packages and new files get created, so the code works, but after starting a new R session, those seemingly unimportant pieces or parts of code that are in the wrong order cause problems.
+These types of errors are usually caused by [not setting up your R session correctly](https://ubc-library-rc.github.io/Beginner_R_Part1/content/about_R.html) before doing data analysis. This is often associated with troubleshooting code, when a bunch of packages and new files can get created. The code may work after troubleshooting, but after starting a new R session those seemingly unimportant pieces or parts of code that are in the wrong order cause problems.
 
 **If your code works, then you go back to it and get an error, this is probably the type of error you are encountering.**
 
@@ -173,6 +171,6 @@ To mitigate this for myself, I
 
 2.  Check for "code is in the wrong order" errors after fixing something that took me a long time.
 
-For step 2, I save and close R, then re-run the script I just fixed in a new R session. If the code still works, then all good!. If the code does not work, then the **troubleshooting is fresh in your mind** and it will be much easier to figure out what part of the code is in the wrong spot than if you went back and got the same error even the next day.
+For step 2, I save and close R, then re-run the script I just fixed in a new R session. If the code still works, then all good! If the code does not work, then the **troubleshooting is fresh in your mind** and it will be much easier to figure out what part of the code is in the wrong spot than if you went back and got the same error even the next day.
 
 

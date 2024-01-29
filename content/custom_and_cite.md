@@ -4,7 +4,7 @@ title: Customization and Citations
 nav_order: 8
 ---
 
-We covered a lot of material today! In the last few minutes, we will go over how to make RStudio look how you and it to and how to save time citing R packages.
+We covered a lot of material today! In the last few minutes, we will go over how to make RStudio look how you want it to and how to save time citing R packages.
 
 # Customization
 
@@ -12,7 +12,7 @@ RStudio is highly customizable in appearance.
 
 If you want to make a quick change to the Zoom of your RStudio, you can hold down CTRL (PC) or CMD (Mac) and press + or - until you have the Zoom level you want.
 
-To changeparameters and RStudio appearance that will be set to your new default for every R session, go to *Tools\>Global Options*
+To change parameters and RStudio appearance that will be set to your new default for every R session, go to *Tools\>Global Options*
 
 ![](images/tools_go.png)
 

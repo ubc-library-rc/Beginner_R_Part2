@@ -31,7 +31,7 @@ From personal experience, being a TA for an R lab, and my time as the libraries 
 
 We are going to go over the errors listed above with examples now and how to fix them.
 
-# 1. R does not understand what you are asking it for
+## 1. R does not understand what you are asking it for
 
 ### Working through errors due to data availability and formatting
 
@@ -130,7 +130,7 @@ This happens because parentheses or quotes were not closed. You need to have the
 
 R will underline mismatched parentheses and they are color coded, so it should be possible to tell which one is missing.
 
-# 2. The data are not formatted properly
+## 2. The data are not formatted properly
 
 Remember how we had to change a matrix to a dataframe in the example in part 1 above? That falls in this category. When running a statistical test, it is usually in the information about the package how the data need to be formatted.
 
@@ -159,7 +159,7 @@ Then, when you run the same code with your own data, if it works, then great! Ot
 
 For every function in R, you can run the `?` function (so here it would be `?adonis`) to get a basic help overview in the **Help** tab in RStudio.
 
-# 3. Code is in the wrong order
+## 3. Code is in the wrong order
 
 These types of errors are usually caused by [not setting up your R session correctly](https://ubc-library-rc.github.io/Beginner_R_Part1/content/about_R.html) before doing data analysis. This is often associated with troubleshooting code, when a bunch of packages and new files can get created. The code may work after troubleshooting, but after starting a new R session those seemingly unimportant pieces or parts of code that are in the wrong order cause problems.
 

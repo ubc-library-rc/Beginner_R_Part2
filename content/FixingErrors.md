@@ -136,7 +136,7 @@ When running a statistical test, it is usually in the information about the pack
 
 The *Comprehensive R Archive Network* (CRAN) is a network of servers that store identical, up-to-date, versions of code and documentation for R. Downloading from CRAN is safe. Everything on CRAN is heavily validated both in terms of quality and documentation provided to the users.
 
-Let's look at the [adonis](https://rdrr.io/rforge/vegan/man/adonis.html) function in the package vegan. This is for multivariate analysis of microbiome data. Here is a screenshopt of part of the *adonis* example on CRAN.
+Let's look at the [adonis](https://rdrr.io/rforge/vegan/man/adonis.html) function in the package vegan. This is for multivariate analysis of microbiome data. Here is a screenshot of part of the *adonis* example on CRAN.
 
 We are not discussing the adonis function here, just exploring the help available for each function that is in a package on CRAN.
 {: .note}

@@ -4,9 +4,11 @@ title: Fixing Errors
 nav_order: 7
 ---
 
+# Fixing Errors
+
 When you get errors, R is trying to help you.
 
-# Why do errors happen?
+## Why do errors happen?
 
 From personal experience, being a TA for an R lab, and my time as the libraries Data Analysis and Visualization GAA, there are a few broad categories of errors:
 
@@ -20,9 +22,7 @@ From personal experience, being a TA for an R lab, and my time as the libraries 
 2.  The data are not formatted properly. For example:
 
     -   You're working with a data frame when it has to be a matrix. Data frames can contain many different types of data but a matrix can only contain a single data type. See more detailed information [here.](https://www.geeksforgeeks.org/matrix-vs-dataframe-in-r/)
-
     -   A variable is numeric but it needs to be a factor.
-
     -   There as NA or 0 values in your data and what you are trying to do can't deal with that.
 
 3.  Your code is in the wrong order or you already ran something that can't be run again on your existing data. This is usually the issue is someone says "this worked before".
@@ -132,11 +132,11 @@ R will underline mismatched parentheses and they are color coded, so it should b
 
 ## 2. The data are not formatted properly
 
-Remember how we had to change a matrix to a dataframe in the example in part 1 above? That falls in this category. When running a statistical test, it is usually in the information about the package how the data need to be formatted.
+When running a statistical test, it is usually in the information about the package how the data need to be formatted.
 
-<strong>CRAN</strong> is a network of servers that store identical, up-to-date, versions of code and documentation for R. Downloading from CRAN is safe. Everything on CRAN is heavily validated both in terms of quality and documentation provided to the users.
+The *Comprehensive R Archive Network* (CRAN) is a network of servers that store identical, up-to-date, versions of code and documentation for R. Downloading from CRAN is safe. Everything on CRAN is heavily validated both in terms of quality and documentation provided to the users.
 
-Let's look at a [function](https://rdrr.io/rforge/vegan/man/adonis.html) in the package vegan. This is for multivariate analysis of microbiome data.
+Let's look at the [adonis](https://rdrr.io/rforge/vegan/man/adonis.html) function in the package vegan. This is for multivariate analysis of microbiome data. Here is a screenshopt of part of the *adonis* example on CRAN.
 
 We are not discussing the adonis function here, just exploring the help available for each function that is in a package on CRAN.
 {: .note}
@@ -144,8 +144,6 @@ We are not discussing the adonis function here, just exploring the help availabl
 ![](images/run_adonis.png)
 
 This information is important to look over when using a new function. Most packages also have examples and example data that you can use to test the function on your computer before using your own data.
-
-This is a screenshot of part of the *adonis* example on [CRAN](https://rdrr.io/rforge/vegan/man/adonis.html).
 
 Note, if you want to run this, you need to run `install.packages("vegan")` followed by `library(vegan)` .
 
@@ -172,5 +170,3 @@ To mitigate this for myself, I
 2.  Check for "code is in the wrong order" errors after fixing something that took me a long time.
 
 For step 2, I save and close R, then re-run the script I just fixed in a new R session. If the code still works, then all good! If the code does not work, then the **troubleshooting is fresh in your mind** and it will be much easier to figure out what part of the code is in the wrong spot than if you went back and got the same error even the next day.
-
-

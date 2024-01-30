@@ -37,7 +37,7 @@ mt$mpg+mt$cyl
 
 Note that R is working along each row when you are using operators.
 
-<div style="margin-left: 5%; margin-bottom: 40px">
+<div style="margin-left: 5%; margin-top: 20px; margin-bottom: 40px">
 <img src="images/addition.png" alt="row-wise operations" width="50%"/>
 </div>
 
@@ -65,7 +65,9 @@ mt$mult = mt$mpg*mt$cyl
 mt$pemdas = (((mt$mpg*2)/10)/mt$gear)
 ```
 
-![](images/pemdas.png)
+<div style="margin-left: 5%; margin-top: 20px; margin-bottom: 40px">
+<img src="images/pemdas.png" alt="pemdas illustration" width="80%"/>
+</div>
 
 The point here is not to re-hash math lessons, but to revisit why the order that we write things is important. We all read English the same way, left to right, top to bottom. R does the same thing with the code you give it. PEMDAS is hopefully a familiar example to illustrate this point with non-English text.
 
@@ -73,15 +75,11 @@ The point here is not to re-hash math lessons, but to revisit why the order that
 
 Sometimes you want to learn about your data, but not manipulate it. R has functions for this as well. These include:
 
-`min()` find the minimum value 
-
-`max()` find the maximal value
-
-`sum()` find the sum 
-
-`mean()` find the mean 
-
-`length()` count the number of entries
+- `min()` find the minimum value 
+- `max()` find the maximal value
+- `sum()` find the sum 
+- `mean()` find the mean 
+- `length()` count the number of entries
 
 ``` r
 ## Find the mean cyl in the mt data
@@ -93,22 +91,15 @@ The mean is 6.1875
 ### Subset our data using other operators
 
 Let's say we only want part of the entire dataset we have. This is achieved with the `subset()` command. Here are a list of operators you might use:
-
-`==` equal to
-
-`!=` not equal to
-
-`>` greater than (only works with numeric or integer variables)
-
-`>=` greater or equal to (only works with numeric or integer variables)
-
-`<` less than (only works with numeric or integer variables)
-
-`<=` less than or equal to(only works with numeric or integer variables)
-
-`&` and
-
-`|` or
+ 
+- `==` equal to
+- `!=` not equal to
+- `>` greater than (only works with numeric or integer variables)
+- `>=` greater or equal to (only works with numeric or integer variables)
+- `<` less than (only works with numeric or integer variables)
+- `<=` less than or equal to(only works with numeric or integer variables)
+- `&` and
+- `|` or
 
 ``` r
 # Create a new dataframe with only cars that have at least 5 cyclinders
@@ -144,22 +135,24 @@ Go to Exercise #3
 
 Find the maximal value of your new *ex2* variable
 
-### Answers for Exercise #1 to 3
-
+### Answers for Exercises
+Click the dropdown to reveal the answers
 
 <details><summary><strong> Exercise 1 </strong></summary>
-mtmid = subset(mt, mt$cyl==4 & mt$qsec \>18 & mt\$gear !=3)
+mtmid = subset(mt, mt$cyl==4 & mt$qsec >18 & mt$gear !=3)
 </details>
 
-<strong> Exercise 2 </strong>
 
-<details>mtmid$ex2 = (mtmid$mpg/mtmid$cyl)^mtmid$carb</details>
+<details><summary><strong> Exercise 2 </strong></summary>
+mtmid$ex2 = (mtmid$mpg/mtmid$cyl)^mtmid$carb
+</details>
 
-<strong>Exercise 3</strong>
 
-<details>max(mtmid\$ex2)</details>
+<details><summary><strong> Exercise 3 </strong></summary>
+max(mtmid$ex2)
+</details>
 
-### Pacing
+## Pacing
 
 ![](zoom-figures/reactions - Copy.png)
 

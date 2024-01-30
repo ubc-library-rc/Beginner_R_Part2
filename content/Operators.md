@@ -73,11 +73,11 @@ The point here is not to re-hash math lessons, but to revisit why the order that
 
 Sometimes you want to learn about your data, but not manipulate it. R has functions for this as well. These include:
 
-- `min()` find the minimum value 
-- `max()` find the maximal value 
-- `sum()` find the sum 
-- `mean()` find the mean 
-- `length()` count the number of entries
+`min()` find the minimum value 
+`max()` find the maximal value 
+`sum()` find the sum 
+`mean()` find the mean 
+`length()` count the number of entries
 
 ``` r
 ## Find the mean cyl in the mt data

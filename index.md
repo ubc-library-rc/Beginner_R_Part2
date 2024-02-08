@@ -19,7 +19,7 @@ Lastly, towards the end we will go over how to customize the look of your RStudi
 At the end of this workshop, you will be able to: 
 1. Use Operators in R 
 2. Fix common errors in R 
-3. Know how to customize RStudio and cite R packages.
+3. Know how to customize RStudio and cite R packages (time permitting)
 
 ## Schedule
 
@@ -27,7 +27,7 @@ At the end of this workshop, you will be able to:
 | 0:05 \| Introduction \|
 | 0:15 \| Operators in R \|
 | 0:30 \| Fixing errors \|
-| 0:50 \| RStudio Customization \|
+| 0:55 \| RStudio Customization \|
 | 1:00 \| Wrap-up and Discussion \|
 
 

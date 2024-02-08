@@ -27,7 +27,6 @@ At the end of this workshop, you will be able to:
 | 0:05 \| Introduction \|
 | 0:15 \| Operators in R \|
 | 0:30 \| Fixing errors \|
-| 0:55 \| RStudio Customization \|
 | 1:00 \| Wrap-up and Discussion \|
 
 

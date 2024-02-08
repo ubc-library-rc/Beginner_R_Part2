@@ -92,7 +92,7 @@ The mean is 6.1875
 
 Let's say we only want part of the entire dataset we have. This is achieved with the `subset()` command. Here are a list of operators you might use:
  
-- `==` equal to
+- `==` exactly equal to **Note, the single equal sign `=` is the same as the "arrow symbol" `<-` and is used to assing variables. Thereofre, `=` is NOT an operator.
 - `!=` not equal to
 - `>` greater than (only works with numeric or integer variables)
 - `>=` greater or equal to (only works with numeric or integer variables)

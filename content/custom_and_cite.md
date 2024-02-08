@@ -4,9 +4,9 @@ title: Customization and Citations
 nav_order: 8
 ---
 
-# Customization and Citations
+# Customization and Citations 
 
-We covered a lot of material today! In the last few minutes, we will go over how to make RStudio look how you want it to and how to save time citing R packages.
+We covered a lot of material today! This extra content page goes over how to make RStudio look how you want it to and how to save time citing R packages.
 
 ## Customization
 

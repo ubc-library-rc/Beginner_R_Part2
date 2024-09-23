@@ -27,7 +27,7 @@ From personal experience, being a TA for an R lab, and my time as the libraries 
 
 3.  Your code is in the wrong order or you already ran something that can't be run again on your existing data. This is usually the issue is someone says "this worked before".
 
-4.  Other problems. These are harder to solve and are the more expert-level things. This can include having to use different versions of R or R packages, laying many functions together, only running parts of the data at a time to not crash a system, etc. If you encounter these types of errors, you are usually pretty advanced in R anyway. I rarely see these type of errors when I am helping others.
+4.  Other problems. These are harder to solve and are the more expert-level things. This can include having to use different versions of R or R packages, using many functions together, only running parts of the data at a time to not crash a system, etc. If you encounter these types of errors, you are usually pretty advanced in R anyway. I rarely see these type of errors when I am helping others.
 
 We are going to go over the errors listed above with examples now and how to fix them.
 
